@@ -1,13 +1,19 @@
 ## Set Up Instruction
 
-1. Go to the root directory that contains `docker-compose.yaml`
-2. Run the following command
+1. To prevent unwanted issues with `next` not building properly during `docker-compose up`, go to frontend directory by typing `cd frontend` and type in
+
+```
+npm install
+```
+
+2. Go back to the root directory by typing `cd ..`
+3. Run the following command
 
 ```
 docker-compose up --build 
 ```
 
-3. Wait until both `frontend` and `backend` containers have finally been spun up. Then type in `http://localhost:3000/` in your local browser to access the frontend. 
+4. Wait until both `frontend` and `backend` containers have finally been spun up. Then type in `http://localhost:3000/` in your local browser to access the frontend. 
 
 
 ## Libraries and Tools Used
@@ -32,3 +38,19 @@ docker-compose up --build
     - Fetch chart data only if it's necessary. Meaning, when user chooses to see a specific chart, that's when the respective API is being called. Then, we can store the fetched data to a cache as we don't want to the app to keep on re-fetching whenever a chart view is requested. (Way more scalable as data grows larger)
 4. I also try to mimic the UI from Blockhouse's main branding!
 5. I have to be honest that this is my first time using Next.js. My past experiences with React and Gatsby helped me with adapting to this new tool.
+
+## Conclusion
+
+Overall, this is a very fun project and I would like to expand on this project if there's more time to make it more scalable. Some ideas that I want to implement:
+
+- CRUD operations with proper database (PostgreSQL or SQLite)
+- Implementing global state management in the frontend
+- Scheduled data processing (data engineering pipeline)
+- Deploying the app to the cloud
+- etc
+
+Would love to hear any feedbacks also :) 
+
+## GitHub repository
+
+https://github.com/Nesto17/blockhouse_oa
