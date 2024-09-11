@@ -1,0 +1,53 @@
+.navbar {
+    /* height: 60px; */
+    margin: 30px;
+    padding: 10px;
+
+    border: 2px solid #bcbcbc;
+    border-radius: 100px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeIcon {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.button {
+    background: var(--primary);
+    padding: 10px 30px;
+    border-radius: 100px;
+
+    transition: background 200ms, color 200ms;
+}
+
+.button:hover {
+    background: var(--foreground);
+    color: var(--primary);
+}
+
+.main {
+    width: 100%;
+    flex: 1;
+    padding: 0 30px 30px;
+}
+
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 640px) {
+    .homeIcon > h4 {
+        display: none;
+    }
+}
